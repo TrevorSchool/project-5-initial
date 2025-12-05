@@ -7,10 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class SortingUtilityTest {
 
+    //GNOME SORT TESTS
     // 1. Empty array
     @Test
     @DisplayName("gnomeSort: empty Integer array should remain empty")
-    public void testGnomeSort_emptyArray_returnsEmptyArray() {
+    public void testGnomeSortEmptyArrayReturnsEmptyArray() {
         // Arrange: empty array
         Integer[] input = {};
         Integer[] expected = {};
@@ -25,7 +26,7 @@ public class SortingUtilityTest {
     // 2. Single element
     @Test
     @DisplayName("gnomeSort: single-element Integer array should remain unchanged")
-    public void testGnomeSort_singleElementArray_remainsUnchanged() {
+    public void testGnomeSortSingleElementArrayRemainsUnchanged() {
         // Arrange: single-element array
         Integer[] input = {42};
         Integer[] expected = {42};
@@ -40,7 +41,7 @@ public class SortingUtilityTest {
     // 3. Two elements (already sorted)
     @Test
     @DisplayName("gnomeSort: two-element Integer array already sorted should remain unchanged")
-    public void testGnomeSort_twoElementArrayAlreadySorted_remainsUnchanged() {
+    public void testGnomeSortTwoElementArrayAlreadySortedRemainsUnchanged() {
         // Arrange
         Integer[] input = {1, 2};
         Integer[] expected = {1, 2};
@@ -55,7 +56,7 @@ public class SortingUtilityTest {
     // 3. Two elements (unsorted)
     @Test
     @DisplayName("gnomeSort: two-element Integer array unsorted should become sorted ascending")
-    public void testGnomeSort_twoElementArrayUnsorted_getsSortedAscending() {
+    public void testGnomeSortTwoElementArrayUnsortedGetsSortedAscending() {
         // Arrange
         Integer[] input = {2, 1};
         Integer[] expected = {1, 2};
@@ -70,7 +71,7 @@ public class SortingUtilityTest {
     // 4. Already sorted array (ascending)
     @Test
     @DisplayName("gnomeSort: already sorted ascending Integer array should remain unchanged")
-    public void testGnomeSort_alreadySortedAscendingArray_remainsUnchanged() {
+    public void testGnomeSortAlreadySortedAscendingArrayRemainsUnchanged() {
         // Arrange
         Integer[] input = {1, 2, 3, 4, 5};
         Integer[] expected = {1, 2, 3, 4, 5};
@@ -85,7 +86,7 @@ public class SortingUtilityTest {
     // 4. "Already sorted" in reverse (i.e., descending, needs full sorting)
     @Test
     @DisplayName("gnomeSort: reverse-sorted Integer array should be sorted ascending")
-    public void testGnomeSort_reverseSortedArray_getsSortedAscending() {
+    public void testGnomeSortReverseSortedArrayGetsSortedAscending() {
         // Arrange: reverse order
         Integer[] input = {5, 4, 3, 2, 1};
         Integer[] expected = {1, 2, 3, 4, 5};
@@ -100,7 +101,7 @@ public class SortingUtilityTest {
     // 5. Array with all duplicates
     @Test
     @DisplayName("gnomeSort: Integer array with all duplicate elements should remain unchanged")
-    public void testGnomeSort_allDuplicateElements_remainsUnchanged() {
+    public void testGnomeSortAllDuplicateElementsRemainsUnchanged() {
         // Arrange
         Integer[] input = {7, 7, 7, 7, 7};
         Integer[] expected = {7, 7, 7, 7, 7};
@@ -115,7 +116,7 @@ public class SortingUtilityTest {
     // 6. Array with some duplicates
     @Test
     @DisplayName("gnomeSort: Integer array with some duplicates should be sorted ascending")
-    public void testGnomeSort_arrayWithSomeDuplicates_getsSortedAscending() {
+    public void testGnomeSortArrayWithSomeDuplicatesGetsSortedAscending() {
         // Arrange
         Integer[] input = {3, 1, 2, 3, 2, 1};
         Integer[] expected = {1, 1, 2, 2, 3, 3};
@@ -130,7 +131,7 @@ public class SortingUtilityTest {
     // 7. Random unsorted array (Integers)
     @Test
     @DisplayName("gnomeSort: random unsorted Integer array should be sorted ascending")
-    public void testGnomeSort_randomUnsortedIntegerArray_getsSortedAscending() {
+    public void testGnomeSortRandomUnsortedIntegerArrayGetsSortedAscending() {
         // Arrange: mixed positive, negative, and zero
         Integer[] input = {10, -3, 5, 0, 8, -1, 4};
         Integer[] expected = {-3, -1, 0, 4, 5, 8, 10};
@@ -146,7 +147,7 @@ public class SortingUtilityTest {
 
     @Test
     @DisplayName("gnomeSort: single-element String array should remain unchanged")
-    public void testGnomeSort_singleElementStringArray_remainsUnchanged() {
+    public void testGnomeSortSingleElementStringArrayRemainsUnchanged() {
         // Arrange
         String[] input = {"apple"};
         String[] expected = {"apple"};
@@ -160,7 +161,7 @@ public class SortingUtilityTest {
 
     @Test
     @DisplayName("gnomeSort: unsorted String array should be sorted lexicographically")
-    public void testGnomeSort_unsortedStringArray_getsSortedLexicographically() {
+    public void testGnomeSortUnsortedStringArrayGetsSortedLexicographically() {
         // Arrange
         String[] input = {"pear", "apple", "orange", "banana"};
         String[] expected = {"apple", "banana", "orange", "pear"};
@@ -174,7 +175,7 @@ public class SortingUtilityTest {
 
     @Test
     @DisplayName("gnomeSort: String array with duplicates should be sorted lexicographically")
-    public void testGnomeSort_stringArrayWithDuplicates_getsSortedLexicographically() {
+    public void testGnomeSortStringArrayWithDuplicatesGetsSortedLexicographically() {
         // Arrange
         String[] input = {"delta", "alpha", "charlie", "alpha", "bravo"};
         String[] expected = {"alpha", "alpha", "bravo", "charlie", "delta"};
@@ -191,11 +192,11 @@ public class SortingUtilityTest {
 
 
 
-
+        //COCKTAIL SHAKER SORT TESTS
         // 1. Empty array
         @Test
         @DisplayName("cocktailShakerSort: empty Integer array should remain empty")
-        public void testCocktailShakerSort_emptyArray_returnsEmptyArray() {
+        public void testCocktailShakerSortEmptyArrayReturnsEmptyArray() {
             // Arrange: empty array
             Integer[] input = {};
             Integer[] expected = {};
@@ -210,7 +211,7 @@ public class SortingUtilityTest {
         // 2. Single element
         @Test
         @DisplayName("cocktailShakerSort: single-element Integer array should remain unchanged")
-        public void testCocktailShakerSort_singleElementArray_remainsUnchanged() {
+        public void testCocktailShakerSortSingleElementArrayRemainsUnchanged() {
             // Arrange: single-element array
             Integer[] input = {42};
             Integer[] expected = {42};
@@ -225,7 +226,7 @@ public class SortingUtilityTest {
         // 3. Two elements (already sorted)
         @Test
         @DisplayName("cocktailShakerSort: two-element Integer array already sorted should remain unchanged")
-        public void testCocktailShakerSort_twoElementArrayAlreadySorted_remainsUnchanged() {
+        public void testCocktailShakerSortTwoElementArrayAlreadySortedRemainsUnchanged() {
             // Arrange
             Integer[] input = {1, 2};
             Integer[] expected = {1, 2};
@@ -240,7 +241,7 @@ public class SortingUtilityTest {
         // 3. Two elements (unsorted)
         @Test
         @DisplayName("cocktailShakerSort: two-element Integer array unsorted should become sorted ascending")
-        public void testCocktailShakerSort_twoElementArrayUnsorted_getsSortedAscending() {
+        public void testCocktailShakerSortTwoElementArrayUnsortedGetsSortedAscending() {
             // Arrange
             Integer[] input = {2, 1};
             Integer[] expected = {1, 2};
@@ -255,7 +256,7 @@ public class SortingUtilityTest {
         // 4. Already sorted array (ascending)
         @Test
         @DisplayName("cocktailShakerSort: already sorted ascending Integer array should remain unchanged")
-        public void testCocktailShakerSort_alreadySortedAscendingArray_remainsUnchanged() {
+        public void testCocktailShakerSortAlreadySortedAscendingArrayRemainsUnchanged() {
             // Arrange: array is already in ascending order
             Integer[] input = {1, 2, 3, 4, 5};
             Integer[] expected = {1, 2, 3, 4, 5};
@@ -270,7 +271,7 @@ public class SortingUtilityTest {
         // 4. Reverse-sorted array (descending)
         @Test
         @DisplayName("cocktailShakerSort: reverse-sorted Integer array should be sorted ascending")
-        public void testCocktailShakerSort_reverseSortedArray_getsSortedAscending() {
+        public void testCocktailShakerSortReverseSortedArrayGetsSortedAscending() {
             // Arrange: reverse order, worst-case for a bubble-style algorithm
             Integer[] input = {5, 4, 3, 2, 1};
             Integer[] expected = {1, 2, 3, 4, 5};
@@ -285,7 +286,7 @@ public class SortingUtilityTest {
         // 5. Array with all duplicates
         @Test
         @DisplayName("cocktailShakerSort: Integer array with all duplicate elements should remain unchanged logically")
-        public void testCocktailShakerSort_allDuplicateElements_remainsLogicallyUnchanged() {
+        public void testCocktailShakerSortAllDuplicateElementsRemainsLogicallyUnchanged() {
             // Arrange
             Integer[] input = {7, 7, 7, 7, 7};
             Integer[] expected = {7, 7, 7, 7, 7};
@@ -300,7 +301,7 @@ public class SortingUtilityTest {
         // 6. Array with some duplicates
         @Test
         @DisplayName("cocktailShakerSort: Integer array with some duplicates should be sorted ascending")
-        public void testCocktailShakerSort_arrayWithSomeDuplicates_getsSortedAscending() {
+        public void testCocktailShakerSortArrayWithSomeDuplicatesGetsSortedAscending() {
             // Arrange: unsorted with duplicates
             Integer[] input = {3, 1, 2, 3, 2, 1};
             Integer[] expected = {1, 1, 2, 2, 3, 3};
@@ -315,7 +316,7 @@ public class SortingUtilityTest {
         // 7. Random unsorted array (Integers)
         @Test
         @DisplayName("cocktailShakerSort: random unsorted Integer array should be sorted ascending")
-        public void testCocktailShakerSort_randomUnsortedIntegerArray_getsSortedAscending() {
+        public void testCocktailShakerSortRandomUnsortedIntegerArrayGetsSortedAscending() {
             // Arrange: mix of positive, negative, and zero
             Integer[] input = {10, -3, 5, 0, 8, -1, 4};
             Integer[] expected = {-3, -1, 0, 4, 5, 8, 10};
@@ -331,7 +332,7 @@ public class SortingUtilityTest {
 
         @Test
         @DisplayName("cocktailShakerSort: single-element String array should remain unchanged")
-        public void testCocktailShakerSort_singleElementStringArray_remainsUnchanged() {
+        public void testCocktailShakerSortSingleElementStringArrayRemainsUnchanged() {
             // Arrange
             String[] input = {"apple"};
             String[] expected = {"apple"};
@@ -345,7 +346,7 @@ public class SortingUtilityTest {
 
         @Test
         @DisplayName("cocktailShakerSort: unsorted String array should be sorted lexicographically")
-        public void testCocktailShakerSort_unsortedStringArray_getsSortedLexicographically() {
+        public void testCocktailShakerSortUnsortedStringArrayGetsSortedLexicographically() {
             // Arrange: out of order lexicographically
             String[] input = {"pear", "apple", "orange", "banana"};
             String[] expected = {"apple", "banana", "orange", "pear"};
@@ -359,7 +360,7 @@ public class SortingUtilityTest {
 
         @Test
         @DisplayName("cocktailShakerSort: String array with duplicates should be sorted lexicographically")
-        public void testCocktailShakerSort_stringArrayWithDuplicates_getsSortedLexicographically() {
+        public void testCocktailShakerSortStringArrayWithDuplicatesGetsSortedLexicographically() {
             // Arrange
             String[] input = {"delta", "alpha", "charlie", "alpha", "bravo"};
             String[] expected = {"alpha", "alpha", "bravo", "charlie", "delta"};
@@ -378,11 +379,11 @@ public class SortingUtilityTest {
 
 
 
-
+        //SHELL SORT TESTS
         // 1. Empty array
         @Test
         @DisplayName("shellSort: empty Integer array should remain empty")
-        public void testShellSort_emptyArray_returnsEmptyArray() {
+        public void testShellSortEmptyArrayReturnsEmptyArray() {
             // Arrange: empty array
             Integer[] input = {};
             Integer[] expected = {};
@@ -397,7 +398,7 @@ public class SortingUtilityTest {
         // 2. Single element
         @Test
         @DisplayName("shellSort: single-element Integer array should remain unchanged")
-        public void testShellSort_singleElementArray_remainsUnchanged() {
+        public void testShellSortSingleElementArrayRemainsUnchanged() {
             // Arrange: single-element array
             Integer[] input = {42};
             Integer[] expected = {42};
@@ -412,7 +413,7 @@ public class SortingUtilityTest {
         // 3. Two elements (sorted)
         @Test
         @DisplayName("shellSort: two-element Integer array already sorted should remain unchanged")
-        public void testShellSort_twoElementArrayAlreadySorted_remainsUnchanged() {
+        public void testShellSortTwoElementArrayAlreadySortedRemainsUnchanged() {
             // Arrange: already sorted two-element array
             Integer[] input = {1, 2};
             Integer[] expected = {1, 2};
@@ -427,7 +428,7 @@ public class SortingUtilityTest {
         // 3. Two elements (unsorted)
         @Test
         @DisplayName("shellSort: two-element Integer array unsorted should become sorted ascending")
-        public void testShellSort_twoElementArrayUnsorted_getsSortedAscending() {
+        public void testShellSortTwoElementArrayUnsortedGetsSortedAscending() {
             // Arrange: unsorted two-element array
             Integer[] input = {2, 1};
             Integer[] expected = {1, 2};
@@ -442,7 +443,7 @@ public class SortingUtilityTest {
         // 4. Already sorted array (ascending)
         @Test
         @DisplayName("shellSort: already sorted ascending Integer array should remain unchanged")
-        public void testShellSort_alreadySortedAscendingArray_remainsUnchanged() {
+        public void testShellSortAlreadySortedAscendingArrayRemainsUnchanged() {
             // Arrange: array already sorted in ascending order
             Integer[] input = {1, 2, 3, 4, 5};
             Integer[] expected = {1, 2, 3, 4, 5};
@@ -457,7 +458,7 @@ public class SortingUtilityTest {
         // 4. Reverse-sorted array (descending)
         @Test
         @DisplayName("shellSort: reverse-sorted Integer array should be sorted ascending")
-        public void testShellSort_reverseSortedArray_getsSortedAscending() {
+        public void testShellSortReverseSortedArrayGetsSortedAscending() {
             // Arrange: reverse order (worst-case for many sorts)
             Integer[] input = {5, 4, 3, 2, 1};
             Integer[] expected = {1, 2, 3, 4, 5};
@@ -472,7 +473,7 @@ public class SortingUtilityTest {
         // 5. Array with all duplicates
         @Test
         @DisplayName("shellSort: Integer array with all duplicate elements should remain logically unchanged")
-        public void testShellSort_allDuplicateElements_remainsLogicallyUnchanged() {
+        public void testShellSortAllDuplicateElementsRemainsLogicallyUnchanged() {
             // Arrange: all elements are the same
             Integer[] input = {5, 5, 5, 5, 5};
             Integer[] expected = {5, 5, 5, 5, 5};
@@ -487,7 +488,7 @@ public class SortingUtilityTest {
         // 6. Array with some duplicates
         @Test
         @DisplayName("shellSort: Integer array with some duplicates should be sorted ascending")
-        public void testShellSort_arrayWithSomeDuplicates_getsSortedAscending() {
+        public void testShellSortArrayWithSomeDuplicatesGetsSortedAscending() {
             // Arrange: unsorted array containing repeated values
             Integer[] input = {3, 1, 2, 3, 2, 1};
             Integer[] expected = {1, 1, 2, 2, 3, 3};
@@ -502,7 +503,7 @@ public class SortingUtilityTest {
         // 7. Random unsorted array (Integers)
         @Test
         @DisplayName("shellSort: random unsorted Integer array should be sorted ascending")
-        public void testShellSort_randomUnsortedIntegerArray_getsSortedAscending() {
+        public void testShellSortRandomUnsortedIntegerArrayGetsSortedAscending() {
             // Arrange: mix of positive, negative, and zero values
             Integer[] input = {10, -3, 5, 0, 8, -1, 4};
             Integer[] expected = {-3, -1, 0, 4, 5, 8, 10};
@@ -518,7 +519,7 @@ public class SortingUtilityTest {
 
         @Test
         @DisplayName("shellSort: single-element String array should remain unchanged")
-        public void testShellSort_singleElementStringArray_remainsUnchanged() {
+        public void testShellSortSingleElementStringArrayRemainsUnchanged() {
             // Arrange: single String element
             String[] input = {"apple"};
             String[] expected = {"apple"};
@@ -532,7 +533,7 @@ public class SortingUtilityTest {
 
         @Test
         @DisplayName("shellSort: unsorted String array should be sorted lexicographically")
-        public void testShellSort_unsortedStringArray_getsSortedLexicographically() {
+        public void testShellSortUnsortedStringArrayGetsSortedLexicographically() {
             // Arrange: Strings in non-lexicographical order
             String[] input = {"pear", "apple", "orange", "banana"};
             String[] expected = {"apple", "banana", "orange", "pear"};
@@ -546,7 +547,7 @@ public class SortingUtilityTest {
 
         @Test
         @DisplayName("shellSort: String array with duplicates should be sorted lexicographically")
-        public void testShellSort_stringArrayWithDuplicates_getsSortedLexicographically() {
+        public void testShellSortStringArrayWithDuplicatesGetsSortedLexicographically() {
             // Arrange: String array with repeated values
             String[] input = {"delta", "alpha", "charlie", "alpha", "bravo"};
             String[] expected = {"alpha", "alpha", "bravo", "charlie", "delta"};

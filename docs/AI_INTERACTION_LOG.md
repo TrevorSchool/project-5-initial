@@ -1154,6 +1154,7 @@ public class SortingUtilityShellSortTest {
     }
 }
 
-
+*** Tests remain unchanged since they appear to accomplish their purpose
+*** I did change the test names to remove the underscores to follow the camelCase convention format
 
 
